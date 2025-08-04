@@ -113,7 +113,7 @@ my-stock-news/
 │   ├── store/             # Zustand 스토어
 │   ├── types/             # TypeScript 타입 정의
 │   └── utils/             # 유틸리티 함수
-├── server/                # 백엔드 서버
+├── server/                # 백엔드 서버(Render)
 │   ├── server.cjs         # Express 서버
 │   ├── newsProxy.cjs      # 뉴스 API 프록시
 │   ├── dartProxy.cjs      # DART API 프록시
@@ -126,7 +126,7 @@ my-stock-news/
 
 ### 1. 종목 검색 및 등록
 
-- 검색창에 기업명 또는 종목코드 입력-
+- 검색창에 기업명 또는 종목코드 입력
 - 검색 결과에서 원하는 종목 선택(키보드 이동키, 엔터 사용가능)
 - "등록" 버튼으로 관심 종목에 추가
 
