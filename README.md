@@ -42,7 +42,7 @@ AI 기반 주식 뉴스 분석 및 채팅 플랫폼
 - **React Query** (서버 상태 관리)
 - **DND Kit** (드래그 앤 드롭)
 
-### Backend (API 요청을 위해 백엔드 서버가 필요함.)
+### Backend (API 요청을 위해 백엔드 서버가 필요함. Render에 별도 배포)
 
 - **Node.js** + **Express**
 - **CORS** (Cross-Origin Resource Sharing)
