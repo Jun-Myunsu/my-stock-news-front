@@ -44,6 +44,7 @@ AI 기반 주식 뉴스 분석 및 채팅 플랫폼
 
 ### Backend (API 요청을 위해 백엔드 서버가 필요함. Render에 별도 배포)
 
+- **https://my-stock-new-server.onrender.com/**
 - **Node.js** + **Express**
 - **CORS** (Cross-Origin Resource Sharing)
 
