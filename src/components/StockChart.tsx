@@ -1,4 +1,5 @@
 import React from 'react';
+import { buildChartUrl } from '../constants/urls';
 
 interface StockChartProps {
   stockCode: string;
@@ -7,8 +8,7 @@ interface StockChartProps {
 }
 
 const StockChart: React.FC<StockChartProps> = ({ stockCode, stockName, onClose }) => {
-  // 네이버 금융 차트 URL
-  const chartUrl = `https://finance.naver.com/item/fchart.naver?code=${stockCode}`;
+  const chartUrl = buildChartUrl(stockCode);
   
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
