@@ -28,7 +28,7 @@ export const useStockSearch = (query: string) => {
 
       const filteredKeys = cachedKeys
         .filter((key) => key.toLowerCase().includes(trimmedQuery))
-        .slice(0, 5);
+        .slice(0, 10); // 더 많이 가져와서 필터링 후 5개 보장
 
       const matched = await Promise.all(
         filteredKeys.map(async (key) => {
@@ -56,7 +56,9 @@ export const useStockSearch = (query: string) => {
         })
       );
 
-      return matched.filter((item): item is StockItem => item !== null);
+      return matched
+        .filter((item): item is StockItem => item !== null)
+        .slice(0, 5); // 최종적으로 5개로 제한
     },
     staleTime: 1000 * 60 * 5,
     retry: false,
