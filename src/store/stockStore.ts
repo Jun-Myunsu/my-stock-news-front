@@ -17,9 +17,6 @@ interface StockState {
   openLayers: Record<number, boolean>;
   // 뉴스 레이어 오픈 상태
   openNewsLayers: Record<number, boolean>;
-  // 로딩 상태
-  loading: boolean;
-  
   // Actions
   addStock: (stock: RegisteredStock) => void;
   removeStock: (id: number) => void;
@@ -30,7 +27,7 @@ interface StockState {
   setOpenNewsLayers: (layers: Record<number, boolean>) => void;
   toggleLayer: (id: number) => void;
   toggleNewsLayer: (id: number) => void;
-  setLoading: (loading: boolean) => void;
+
   loadFromStorage: () => Promise<void>;
 }
 
@@ -42,7 +39,7 @@ export const useStockStore = create<StockState>()(
       news: {},
       openLayers: {},
       openNewsLayers: {},
-      loading: false,
+
 
       addStock: (stock) =>
         set((state) => ({
@@ -74,7 +71,7 @@ export const useStockStore = create<StockState>()(
           openNewsLayers: { ...state.openNewsLayers, [id]: !state.openNewsLayers[id] },
         })),
 
-      setLoading: (loading) => set({ loading }),
+
 
       loadFromStorage: async () => {
         const saved = await localforage.getItem<RegisteredStock[]>(STORAGE_KEYS.REGISTERED_STOCKS);
