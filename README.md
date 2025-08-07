@@ -90,8 +90,10 @@ cp server/.env.example server/.env
 ### 4. 서버 실행
 
 ```bash
-# 백엔드 서버 실행 (포트 4000)
-npm run server
+# 백엔드 서버 실행
+ - https://my-stock-new-server.onrender.com 을 열어 sleep 상태 서버를 동작시켜주세요.
+ - 서버 실행시 오래 걸릴 수 있음. 서버 실행이 안될 때 -> metalbaram2@gmail.com 로 문의 주세요.
+# (dev) npm run server
 
 # 프론트엔드 개발 서버 실행 (포트 3000)
 npm run dev
